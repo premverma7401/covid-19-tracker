@@ -3,18 +3,23 @@
 }
 
 body {
-  background-color: oldlace;
+  background-color: #91f9e5;
 }
 .app {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
 }
-
+.app_dropdown {
+  background-color: #5fdd9d;
+}
 .app_left {
   flex: 0.9;
 }
 
+.app_right {
+  padding: 10px;
+}
 .app_right h3 {
   padding: 10px;
   text-align: center;

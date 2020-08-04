@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import './Table.css';
 import { ListItem, ListItemText, List, Divider } from '@material-ui/core';
 import numeral from 'numeral';
+import '../styles/Table.css';
 
 const Table = ({ countries }) => {
   return (

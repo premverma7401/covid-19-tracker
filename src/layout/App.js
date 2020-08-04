@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
-import { FormControl, Select, MenuItem, Card, Zoom } from '@material-ui/core';
-import InfoBox from './InfoBox';
-import Map from './Map';
-import Table from './Table';
-import { sortData, prettyPrintStat } from './utils';
-import LineGraph from './LineGraph';
+import { FormControl, Select, MenuItem, Card } from '@material-ui/core';
+import { sortData, prettyPrintStat } from '../utils';
+import InfoBox from '../components/InfoBox';
+import Map from '../components/Map';
+import Table from '../components/Table';
+import LineGraph from '../components/LineGraph';
+import '../styles/App.css';
 import 'leaflet/dist/leaflet.css';
 
 function App() {
-  const [country, setCountry] = useState('worldwide');
   const [countries, setCountries] = useState([]);
-  const [countryInfo, setcountryInfo] = useState({});
+  const [country, setCountry] = useState('worldwide');
   const [tableData, setTableData] = useState([]);
+  const [countryInfo, setcountryInfo] = useState({});
   const [mapCenter, setMapCenter] = useState({ lat: 20.5937, lng: 78.9629 });
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
-
   const [casesType, setCasesType] = useState('cases');
 
   const baseUrl = 'https://disease.sh/v3/covid-19';
@@ -60,7 +59,6 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setcountryInfo(data);
-        console.log(data);
         countryCode === 'worldwide'
           ? setMapCenter({
               lat: 20.5937,
@@ -117,9 +115,9 @@ function App() {
         </div>
         <div className="app_map">
           <Map
+            countries={mapCountries}
             center={mapCenter}
             zoom={mapZoom}
-            countries={mapCountries}
             casesType={casesType}
           />
         </div>

@@ -1,6 +1,8 @@
 .infoBox {
   flex: 1;
   cursor: pointer;
+  text-align: center;
+  font-size: large;
 }
 .infoBox:not(:last-child) {
   margin-right: 15px;
@@ -17,17 +19,22 @@
 .infoBox--cases--green {
   color: lightgreen !important;
 }
-
-.infoBox__cases {
-  color: #cc1034;
+.infoBox__cases-ar {
+  display: flex;
+  justify-content: space-evenly;
+  color: #3f4531;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
 }
-
 .infoBox__total {
   color: #6c757d;
   font-weight: 700 !important;
   font-size: 0.8rem !important;
   margin-top: 15px !important;
+}
+@media (max-width: 990px) {
+  .infoBox {
+    flex-direction: column;
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@material-ui/core';
-import './InfoBox.css';
+import '../styles/InfoBox.css';
 
 const InfoBox = ({ title, cases, total, active, isRed, ...props }) => {
   return (
@@ -14,11 +14,14 @@ const InfoBox = ({ title, cases, total, active, isRed, ...props }) => {
         <Typography className="infoBox_title" color="textSecondary">
           {title}
         </Typography>
-        <h2 className={`infoBox__cases ${!isRed && 'infoBox--cases--green'}`}>
-          {cases}
-        </h2>
+        <Typography
+          className={`infoBox__cases ${!isRed && 'infoBox--cases--green'}`}
+        >
+          Today-<strong>{cases}</strong>
+        </Typography>
+
         <Typography className="infoBox__total" color="textSecondary">
-          Total-{total}
+          Total so far-{total}
         </Typography>
       </CardContent>
     </Card>

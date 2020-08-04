@@ -1,6 +1,7 @@
 {
   "name": "covid-19-tracker",
   "version": "0.1.0",
+  "homepage": "https://covid19.premsager.com",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
