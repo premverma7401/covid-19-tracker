@@ -1,9 +1,40 @@
 * {
   margin: 0;
 }
+
+body {
+  background-color: oldlace;
+}
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.app_left {
+  flex: 0.9;
+}
+
+.app_right h3 {
+  padding: 10px;
+  text-align: center;
+}
+.app_right_card2 {
+  margin-top: 30px;
+}
 .app_header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+.app_stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
 }

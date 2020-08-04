@@ -1,0 +1,16 @@
+.table {
+  margin-top: 20px;
+  overflow-y: scroll;
+  height: 400px;
+  color: black;
+}
+
+.tableRowItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableRowData {
+  padding: 0.8em;
+  font-weight: bolder;
+}
