@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #91f9e5;
+  background-color: #283f3b;
 }
 .app {
   display: flex;
@@ -32,6 +32,9 @@ body {
   align-items: center;
   margin-bottom: 20px;
   justify-content: space-evenly;
+}
+.app_header h1 {
+  color: #99ddc8;
 }
 .app_stats {
   display: flex;

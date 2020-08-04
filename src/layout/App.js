@@ -19,6 +19,7 @@ function App() {
   const [casesType, setCasesType] = useState('cases');
 
   const baseUrl = 'https://disease.sh/v3/covid-19';
+
   useEffect(() => {
     const fetchCountriesList = async () => {
       await fetch(baseUrl + '/countries')

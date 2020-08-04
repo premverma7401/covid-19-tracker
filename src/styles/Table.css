@@ -1,16 +1,25 @@
-.table {
-  margin-top: 20px;
-  overflow-y: scroll;
+th {
+  width: 15%;
+}
+tr {
+  display: block;
+}
+tbody {
+  display: block;
+  overflow: auto;
   height: 400px;
-  color: black;
 }
-
-.tableRowItem {
-  display: flex;
-  justify-content: space-between;
-}
-
-.tableRowData {
-  padding: 0.8em;
+td {
+  padding: 10px;
   font-weight: bolder;
+  width: 50px;
+  display: inline-block;
+}
+img {
+  width: 50px;
+  height: 30px;
+}
+
+tr:nth-child(even) {
+  background-color: lightgray;
 }
