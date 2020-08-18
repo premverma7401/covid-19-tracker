@@ -3,10 +3,11 @@ import { FormControl, Select, MenuItem, Card } from '@material-ui/core';
 import { sortData, prettyPrintStat } from '../utils';
 import InfoBox from '../components/InfoBox';
 import Map from '../components/Map';
-import Table from '../components/Table';
+import Table from '../components/TableData';
 import LineGraph from '../components/LineGraph';
 import '../styles/App.css';
 import 'leaflet/dist/leaflet.css';
+import TableData from '../components/TableData';
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -124,10 +125,12 @@ function App() {
         </div>
       </div>
       <div className="app_right">
-        <Card>
-          <h3>Live cases by countries</h3>
-          <Table countries={tableData} />
-        </Card>
+        <div className="table-data">
+          <Card>
+            <h3>Live cases by countries</h3>
+            <TableData countries={tableData} />
+          </Card>
+        </div>
         <Card className="app_right_card2">
           <h3>worldwide new {casesType}</h3>
           <LineGraph casesType={casesType} />

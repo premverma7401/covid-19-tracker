@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -11,6 +16,7 @@ body {
   padding: 20px;
 }
 .app_dropdown {
+  display: flex;
   background-color: #5fdd9d;
 }
 .app_left {
@@ -34,6 +40,7 @@ body {
   justify-content: space-evenly;
 }
 .app_header h1 {
+  display: block;
   color: #99ddc8;
 }
 .app_stats {
@@ -43,6 +50,14 @@ body {
 
 @media (max-width: 990px) {
   .app {
+    display: flex;
     flex-direction: column;
+    width: auto;
+  }
+  .app_header {
+    display: flex;
+  }
+  .app_dropdown {
+    width: auto;
   }
 }
